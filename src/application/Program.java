@@ -39,7 +39,7 @@ public class Program {
 
         contractService.processContract(obj,numberOfInstallments);
 
-        System.out.println("Installments: ");
+        System.out.println("Installments: "); //a
 
         for(Installment installment : obj.getInstallments())
         {
