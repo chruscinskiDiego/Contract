@@ -1,31 +1,31 @@
-# Simulador de parcelas de contratos
+# Contract installment simulator
 
-Aplicação de console em Java para calcular parcelas de um contrato a partir de seu valor, data e quantidade de prestações.
+Java console application that calculates contract installments from the contract value, date and number of payments.
 
-## Funcionalidades
+## Features
 
-- Leitura dos dados do contrato pelo terminal.
-- Geração das datas de vencimento e valores das parcelas.
-- Separação entre entidades, processamento do contrato e cálculo de taxas.
-- Estratégia de pagamento definida pela interface OnlinePaymentService.
+- Reads contract details from the terminal.
+- Calculates installment due dates and amounts.
+- Separates entities, contract processing and fee calculation.
+- Defines a payment strategy through the OnlinePaymentService interface.
 
-## Executar
+## Run locally
 
-Requer JDK 17 ou compatível com as APIs utilizadas.
+Requires JDK 17 or a version compatible with the APIs used.
 
 ```bash
 javac -encoding UTF-8 -d out src/application/Program.java src/entities/*.java src/services/*.java
 java -cp out application.Program
 ```
 
-Informe datas no formato dd/MM/yyyy e valores com ponto decimal.
+Enter dates as dd/MM/yyyy and use a decimal point for amounts.
 
-## Organização
+## Structure
 
-- `entities/`: contratos e parcelas.
-- `services/`: processamento e estratégia de taxas.
-- `application/Program.java`: entrada pelo terminal.
+- `entities/`: contracts and installments.
+- `services/`: processing and fee strategy.
+- `application/Program.java`: terminal entry point.
 
-## Escopo
+## Scope
 
-Exercício de orientação a objetos e injeção de dependências. A classe PaypalService simula regras de cobrança: não realiza chamadas à API do PayPal nem gera documentos de contrato.
+An exercise in object-oriented programming and dependency injection. PaypalService simulates fee rules; it does not call the PayPal API or generate contract documents.
